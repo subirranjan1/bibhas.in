@@ -55,7 +55,7 @@ function execute(){
             setConsoleVal(full_command, str);
             break;
         case 'whoareyou':
-            setConsoleVal(full_command, 'I am Bibhas.');
+            setConsoleVal(full_command, 'Hi, I am Bibhas. A small-time developer and geek from Kolkata, India. Nice to see you here. :)');
             break;
         case 'whoami':
             setConsoleVal(full_command, 'I don\'t know yet.');
