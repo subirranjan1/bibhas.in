@@ -50,6 +50,7 @@ function execute(){
             str += 'blog open: Opens my blog in a new tab.' + '<br />';
             str += 'github: Prints my Github profile\'s URL.' + '<br />';
             str += 'github open: Opens my Github profile in a new tab.' + '<br />';
+            str += 'search: Searches Google, Duckduckgo and Bing in new tabs for any following keyword(s).' + '<br />';
             str += 'ip: Prints your IP.' + '<br />';
             str += 'clear: Resets this console.' + '<br />';
             setConsoleVal(full_command, str);
