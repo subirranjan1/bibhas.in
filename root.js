@@ -95,6 +95,17 @@ function execute(){
         case 'hello':
             setConsoleVal(full_command, 'Hi. :)');
             break;
+        case 'search':
+            var q = '';
+            for(var i=1; i<comm_arr.length; i++){
+                q += comm_arr[i] + ' ';
+            }
+            q = $.trim(q);
+            window.open('http://www.bing.com/search?setmkt=en-US&q=' + q);
+            window.open('https://duckduckgo.com/?q=' + q);
+            window.open('https://www.google.co.in/search?ix=sea&ie=UTF-8&q=' + q);
+            setConsoleVal(full_command, 'Searching for \"' + q + '\"');
+            break;
         default:
             setConsoleVal(full_command, 'Invalid command.');
     }
