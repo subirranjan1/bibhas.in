@@ -1,0 +1,104 @@
+body{
+    background: #281E1D;
+    color: #efefef;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.1em;
+}
+
+a{
+    color: #9ae4e8;
+    text-decoration: none;
+}
+
+#wrapper{
+    width: 900px;
+    margin: 0 auto;
+}
+
+#content{
+    margin-top: 50px;
+    width: 900px;
+    height: 500px;
+}
+
+.highlight{
+    font-family: 'Ultra';
+    color: #fff;
+    font-size: 2.5em;
+    padding: 100px 0 0 220px;
+    background: url(../images/mafia4.png) no-repeat;
+}
+
+#navigation{
+    border: 1px solid #333;
+    padding-right: 20px;
+}
+#nav_main{
+    float: right;
+}
+#nav_main li{
+    float:left;
+    list-style: none;
+    margin-left: 10px;
+}
+
+#head_msg{
+    padding: 10px 0;
+}
+/* Unfollow Page */
+#following_list{
+    height: 400px;
+    overflow-y: scroll;
+}
+.follower{
+    float:left;
+    width: 195px;
+    height: 60px;
+    border: 1px solid #444;
+    padding: 5px;
+    margin: 0 10px 10px 0;
+}
+.follower img{
+    float:left;
+    margin-right: 5px;
+    background: #fff;
+}
+.checked{
+    background: #3F3F3F;
+}
+.chkbx_tbuf{
+    float:right;
+}
+.tbuf_name{
+    font-size: 0.9em;
+}
+.tbuf_loc, .tbuf_count{
+    font-size: 0.7em
+}
+#filter_list{
+    margin-left: -50px;
+}
+#filter_list li{
+    float:left;
+    height: 25px;
+    list-style:none;
+    margin-left: 10px;
+    padding: 3px 5px;
+    border: 1px solid #444;
+}
+#filter_list li.opted{
+    background-color: #464646;
+}
+#submit_button{
+    font-size: 2em;
+    float:right;
+    margin-top: -15px;
+}
+#submit_button:hover{
+    cursor: pointer;
+}
+/* Unfollow finish */
+
+.clearfix{
+    clear:both;
+}

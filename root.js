@@ -34,7 +34,7 @@ function wrapConsoleLine(str){
 }
 
 function execute(){
-    var full_command = $('#command').val();
+    var full_command = $.trim($('#command').val());
     var comm_arr = full_command.split(' ');
     var comm = comm_arr[0];
     
@@ -51,6 +51,7 @@ function execute(){
             str += 'github: Prints my Github profile\'s URL.' + '<br />';
             str += 'github open: Opens my Github profile in a new tab.' + '<br />';
             str += 'search: Searches Google, Duckduckgo and Bing in new tabs for any following keyword(s).' + '<br />';
+            str += 'linuxdl: Downloads Linux distro of your choice(Only Ubuntu is available now.'
             str += 'ip: Prints your IP.' + '<br />';
             str += 'clear: Resets this console.' + '<br />';
             setConsoleVal(full_command, str);
@@ -106,6 +107,49 @@ function execute(){
             window.open('https://duckduckgo.com/?q=' + q);
             window.open('https://www.google.co.in/search?ix=sea&ie=UTF-8&q=' + q);
             setConsoleVal(full_command, 'Searching for \"' + q + '\"');
+            break;
+        case 'linuxdl':
+            console.log(comm_arr);
+            var helpstring = '';
+            if(!comm_arr.hasOwnProperty(1)){
+                helpstring += 'command structure - <br />';
+                helpstring += 'linuxdl [ubuntu [12.04 [alternate [i386 [torrent]]]]] <br />';
+            }
+            if(comm_arr[1] == 'ubuntu'){
+                var disturl = 'http://releases.ubuntu.com';
+                var version = '';
+                var build = '';
+                var platform = '';
+                var format = 'iso';
+                if(!comm_arr.hasOwnProperty(2)){
+                    version = '12.04';
+                }else if(comm_arr[2]!=''){
+                    version = comm_arr[2];
+                }
+
+                if(!comm_arr.hasOwnProperty(3)){
+                    build = 'alternate';
+                }else if(comm_arr[3]!=' '){
+                    build = comm_arr[3];
+                }
+
+                if(!comm_arr.hasOwnProperty(4)){
+                    platform = 'i386';
+                }else if(comm_arr[4]!=' '){
+                    platform = comm_arr[4];
+                }
+
+                if(!comm_arr.hasOwnProperty(5)){
+                    format = 'iso';
+                }else if(comm_arr[5]!='iso'){
+                    format = 'iso.' + comm_arr[5];
+                }
+                // http://releases.ubuntu.com/12.04/ubuntu-12.04-alternate-amd64.iso
+                disturl += "/" + version + "/" + "ubuntu" + "-" + version + "-" + build + "-" + platform + "." + format;
+                setConsoleVal(full_command, "Downloading " + disturl);
+                window.open(disturl);
+            }
+            setConsoleVal(full_command, helpstring);
             break;
         default:
             setConsoleVal(full_command, 'Invalid command.');

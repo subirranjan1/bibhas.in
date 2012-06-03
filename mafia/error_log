@@ -1,0 +1,44 @@
+[20-Nov-2011 19:17:15] PHP Fatal error:  Call to a member function get_accountVerify_credentials() on a non-object in /home/latesten/bibhas.in/f5stat/template/unfollow/body.tpl.php on line 2
+[21-Nov-2011 00:37:02] PHP Fatal error:  Call to a member function get_accountVerify_credentials() on a non-object in /home/latesten/bibhas.in/f5stat/template/unfollow/body.tpl.php on line 2
+[24-Nov-2011 03:05:08] PHP Fatal error:  Uncaught exception 'EpiTwitterException' in /home/latesten/bibhas.in/f5stat/twasync/EpiTwitter.php:271
+Stack trace:
+#0 /home/latesten/bibhas.in/f5stat/twasync/EpiTwitter.php(218): EpiTwitterException::raise(Object(EpiCurlManager), false)
+#1 /home/latesten/bibhas.in/f5stat/twasync/EpiTwitter.php(119): EpiTwitterJson->__get('response')
+#2 /home/latesten/bibhas.in/f5stat/twasync/EpiTwitter.php(36): EpiTwitter->request('GET', '/users/lookup.j...', Array)
+#3 /home/latesten/bibhas.in/f5stat/template/unfollow/body.tpl.php(80): EpiTwitter->get('/users/lookup.j...', Array)
+#4 /home/latesten/bibhas.in/f5stat/template/unfollow/body.tpl.php(25): get_all_frnds_details(Array)
+#5 /home/latesten/bibhas.in/f5stat/unfollow.php(23): include('/home/latesten/...')
+#6 {main}
+  thrown in /home/latesten/bibhas.in/f5stat/twasync/EpiTwitter.php on line 271
+[24-Nov-2011 03:09:51] PHP Fatal error:  Uncaught exception 'EpiTwitterBadGatewayException' with message '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <title>Twitter / Over capacity</title>
+    <link href="//si0.twimg.com/sticky/error_pages/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style type="text/css">
+      /* Page
+      ----------------------------------------------- */
+      * { border: 0; padding: 0; margin: 0; }
+      body{ margin: 10px 0; background:#C0DEED url(//si0.twimg.com/sticky/error_pages/bg-clouds.png) repeat-x; color:#333; font: 12px Lucida Grande, Arial, sans-serif; text-align:center }
+      #container { width: 755px; margin: 0 auto; padding: 0px 0; text-align: left; position: relative; }
+      #content { width: 100%; margin-t in /home/latesten/bibhas.in/f5stat/twasync/EpiTwitter.php on line 267
+[25-Nov-2011 02:49:16] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/latesten/bibhas.in/f5stat/template/head.tpl.php:17) in /home/latesten/bibhas.in/f5stat/template/unfollow/body.tpl.php on line 2
+[25-Nov-2011 02:49:17] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/latesten/bibhas.in/f5stat/template/head.tpl.php:17) in /home/latesten/bibhas.in/f5stat/template/unfollow/body.tpl.php on line 2
+[25-Nov-2011 02:49:31] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/latesten/bibhas.in/f5stat/template/head.tpl.php:17) in /home/latesten/bibhas.in/f5stat/template/unfollow/body.tpl.php on line 2
+[25-Nov-2011 02:49:47] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/latesten/bibhas.in/f5stat/template/head.tpl.php:17) in /home/latesten/bibhas.in/f5stat/template/unfollow/body.tpl.php on line 2
+[25-Nov-2011 02:49:55] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/latesten/bibhas.in/f5stat/template/head.tpl.php:17) in /home/latesten/bibhas.in/f5stat/template/unfollow/body.tpl.php on line 2
+[22-Dec-2011 17:53:11] PHP Fatal error:  Call to a member function get_accountVerify_credentials() on a non-object in /home/latesten/bibhas.in/mafia/template/unfollow/body.tpl.php on line 3
+[22-Dec-2011 18:08:51] PHP Fatal error:  Uncaught exception 'EpiTwitterNotAuthorizedException' with message '{"error":"Could not authenticate with OAuth.","request":"\/1\/account\/verify_credentials.json"}' in /home/latesten/bibhas.in/mafia/twasync/EpiTwitter.php:255
+Stack trace:
+#0 /home/latesten/bibhas.in/mafia/twasync/EpiTwitter.php(218): EpiTwitterException::raise(Object(EpiCurlManager), false)
+#1 /home/latesten/bibhas.in/mafia/twasync/EpiTwitter.php(119): EpiTwitterJson->__get('response')
+#2 /home/latesten/bibhas.in/mafia/twasync/EpiTwitter.php(101): EpiTwitter->request('GET', '/account/verify...', NULL)
+#3 /home/latesten/bibhas.in/mafia/template/dashboard/body.tpl.php(2): EpiTwitter->__call('get_accountVeri...', Array)
+#4 /home/latesten/bibhas.in/mafia/template/dashboard/body.tpl.php(2): EpiTwitter->get_accountVerify_credentials()
+#5 /home/latesten/bibhas.in/mafia/dashboard.php(25): include('/home/latesten/...')
+#6 {main}
+  thrown in /home/latesten/bibhas.in/mafia/twasync/EpiTwitter.php on line 255
+[22-Dec-2011 18:11:44] PHP Fatal error:  Call to a member function get_accountVerify_credentials() on a non-object in /home/latesten/bibhas.in/mafia/template/dashboard/body.tpl.php on line 2
