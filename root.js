@@ -51,7 +51,7 @@ function execute(){
             str += 'github: Prints my Github profile\'s URL.' + '<br />';
             str += 'github open: Opens my Github profile in a new tab.' + '<br />';
             str += 'search: Searches Google, Duckduckgo and Bing in new tabs for any following keyword(s).' + '<br />';
-            str += 'linuxdl: Downloads Linux distro of your choice(Only Ubuntu is available now.'
+            str += 'linuxdl: Downloads Linux distro of your choice(Only Ubuntu is available now).<br />'
             str += 'ip: Prints your IP.' + '<br />';
             str += 'clear: Resets this console.' + '<br />';
             setConsoleVal(full_command, str);
